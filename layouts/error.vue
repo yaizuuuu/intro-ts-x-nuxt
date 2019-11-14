@@ -16,10 +16,13 @@
 import { Component, Vue, Prop } from 'nuxt-property-decorator'
 
 @Component
-export class Error extends Vue {
+export default class Error extends Vue {
   layout = 'empty'
   pageNotFound = '404 Not Found'
   otherError = 'An error occurred'
+
+  // TODO: any型以外を模索
+  @Prop({ type: Object, default: null }) error!: any
 
   head() {
     const title = this.error.statusCode === 404 ? this.pageNotFound : this.otherError
@@ -27,8 +30,6 @@ export class Error extends Vue {
       title
     }
   }
-
-  @Prop({ type: Object, default: null }) error!: object
 }
 </script>
 
