@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors'
+// import colors from 'vuetify/es5/util/colors'
 
 export default {
   mode: 'spa',
@@ -28,7 +28,9 @@ export default {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    '~/assets/base.scss'
+  ],
   /*
   ** Plugins to load before mounting the App
   */
@@ -59,21 +61,21 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+    // customVariables: ['~/assets/variables.scss'],
+    // theme: {
+    //   dark: true,
+    //   themes: {
+    //     dark: {
+    //       primary: colors.blue.darken2,
+    //       accent: colors.grey.darken3,
+    //       secondary: colors.amber.darken3,
+    //       info: colors.teal.lighten1,
+    //       warning: colors.amber.base,
+    //       error: colors.deepOrange.accent4,
+    //       success: colors.green.accent3
+    //     }
+    //   }
+    // }
   },
   /*
   ** Build configuration
@@ -84,14 +86,14 @@ export default {
     */
     // extend (config: any, ctx: any) {
     // }
-    build: {
-      babel: {
-        plugins: [
-          ['@babel/plugin-proposal-decorators', { legacy: true }],
-          ['@babel/plugin-proposal-class-properties', { loose: true }]
-        ]
-      }
-    }
+    // build: {
+    //   babel: {
+    //     plugins: [
+    //       ['@babel/plugin-proposal-decorators', { legacy: true }],
+    //       ['@babel/plugin-proposal-class-properties', { loose: true }]
+    //     ]
+    //   }
+    // }
   },
   typescript: {
     typeCheck: {
