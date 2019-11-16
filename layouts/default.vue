@@ -7,7 +7,7 @@
     <v-content>
       <v-container fluid>
         <v-row align="center" justify="center">
-          <v-col md="2" offset-md="1"></v-col>
+          <v-col md="2" offset-md="1" />
           <v-col class="text-center">
             <v-card class="mx-auto">
               <nuxt />
@@ -18,7 +18,7 @@
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col md="2"></v-col>
+          <v-col md="2" />
         </v-row>
       </v-container>
     </v-content>

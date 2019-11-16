@@ -86,14 +86,14 @@ export default {
     */
     // extend (config: any, ctx: any) {
     // }
-    // build: {
-    //   babel: {
-    //     plugins: [
-    //       ['@babel/plugin-proposal-decorators', { legacy: true }],
-    //       ['@babel/plugin-proposal-class-properties', { loose: true }]
-    //     ]
-    //   }
-    // }
+    build: {
+      babel: {
+        plugins: [
+          ['@babel/plugin-proposal-decorators', { legacy: true }],
+          ['@babel/plugin-proposal-class-properties', { loose: true }]
+        ]
+      }
+    }
   },
   typescript: {
     typeCheck: {
