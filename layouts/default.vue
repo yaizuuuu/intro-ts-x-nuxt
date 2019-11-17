@@ -1,24 +1,19 @@
 <template>
   <v-app>
     <v-app-bar app color="white">
-      <v-toolbar-title>Yaizuuuu Tech Blog</v-toolbar-title>
+      <v-toolbar-title>Yaizuuuu Tech Blog 3</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
       <v-container fluid>
         <v-row align="center" justify="center">
-          <v-col md="2" offset-md="1" />
-          <v-col class="text-center">
+          <v-col md="1" offset-md="1" />
+          <v-col md="8">
             <v-card class="mx-auto">
               <nuxt />
-              <v-card-actions>
-                <v-btn text color="deep-purple accent-4">
-                  Learn More
-                </v-btn>
-              </v-card-actions>
             </v-card>
           </v-col>
-          <v-col md="2" />
+          <v-col md="1" />
         </v-row>
       </v-container>
     </v-content>

@@ -24,9 +24,11 @@
       ]
     },
     "types": [
-      "@types/node",
       "@nuxt/types",
       "@nuxtjs/axios",
+      "@types/node",
+      "@types/marked",
+      "@types/highlightjs",
       "vuetify"
     ]
   },
