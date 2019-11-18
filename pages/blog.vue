@@ -6,14 +6,14 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import marked from 'marked'
-import 'highlight.js/scss/atom-one-dark.scss'
+import 'highlight.js/scss/monokai-sublime.scss'
 import highlightjs from 'highlight.js'
 
 marked.setOptions({
   // code要素にdefaultで付くlangage-を削除
   langPrefix: '',
   // highlightjsを使用したハイライト処理を追加
-  highlight(code, lang) {
+  highlight (code, lang) {
     return highlightjs.highlightAuto(code, [lang]).value
   }
 })
@@ -219,11 +219,14 @@ jqコマンドを使えば、\`aws route53 list-resource-record-sets\` で取得
 `
 
   get getHtml (): string {
-    if (this.md) {
-      console.log(marked(this.md))
-    }
+    const tempElement = document.createElement('div')
+    tempElement.innerHTML = marked(this.md)
+    const codeBlocks = tempElement.querySelectorAll('pre')
+    codeBlocks.forEach((el) => {
+      el.classList.add('hljs')
+    })
 
-    return marked(this.md)
+    return tempElement.innerHTML
   }
 }
 </script>
@@ -240,18 +243,35 @@ jqコマンドを使えば、\`aws route53 list-resource-record-sets\` で取得
     border-bottom: 1px solid #ddd;
   }
 
-  ul, pre code {
+  ul, pre {
     margin-bottom: 30px;
+  }
+
+  pre {
+    border-radius: 6px;
+    padding: 15px;
   }
 
   pre code {
     display: block;
     width: 100%;
-    padding: 10px;
   }
 
   p {
     margin-bottom: 20px;
+  }
+
+  pre code {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .hljs code {
+    color: #f8f8f2;
+
+    &::before {
+      content: "";
+    }
   }
 }
 </style>
