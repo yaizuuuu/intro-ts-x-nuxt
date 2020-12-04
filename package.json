@@ -16,7 +16,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@types/highlightjs": "^9.12.0",
     "@types/marked": "^0.7.2",
-    "highlight.js": "^9.16.2",
+    "highlight.js": "^10.4.1",
     "marked": "^0.7.0",
     "nuxt": "^2.0.0",
     "nuxt-property-decorator": "^2.5.0",
